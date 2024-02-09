@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  hotreloadtest:
+    image: ${DOCKER_REGISTRY-}hotreloadtest
+    build:
+      context: .
+      dockerfile: HotReloadTest/Dockerfile
+
+  hotreloadtest2:
+    image: ${DOCKER_REGISTRY-}hotreloadtest2
+    build:
+      context: .
+      dockerfile: HotReloadTest2/Dockerfile
+
